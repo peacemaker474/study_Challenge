@@ -1,0 +1,58 @@
+.synch_modal{
+    width: 150px;
+    height: 190px;
+    border: 1px solid rgba(10, 10, 10, 0.2) ;
+    position: absolute;
+    top: 7%;
+    left: 4%;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.6s ease-in-out;
+}
+.synch,
+.premier,
+.userSetting{
+    width: 100%;
+    height: 30%;
+    padding-top: 8px;
+    font-size: 14px;
+    color: black;
+}
+
+.premier {
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.1  );
+}
+
+.synch_modal .synch > span,
+.synch_modal .premier > span{
+    width: 100%;
+    padding: 5px 0 5px 10px;
+    color: limegreen;
+    display: block;
+}
+
+.synch > button,
+.premier > button,
+.userSetting > button
+.logout {
+    width:100%;
+    padding: 6px 0 0 10px;
+    display: block;
+}
+.userSetting > button,
+.logout{
+    padding: 5px 0 0 10px;
+    display:block;
+}
+.logout {
+    margin-top: 5px;
+}
+
+.synch_showing{
+    transform-origin: 0% 0%;
+    transform: scale(0);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script defer src="js/index.js"></script>
+    <script defer src="js/LoginModal.js"></script>
+    <title> 뽀모도 </title>
+</head>
+<body>
+    <header>
+        <!-- 좌측 로그인 영역 -->
+        <div class="loginForm">
+            <div class="profileImg">
+                <img src="assets/파이리.jpeg" alt="profileImg" />
+            </div>
+            <button class="loginBtn" aria-label="Login Button">
+                로그인
+            </button>
+            <span> | </span>
+            <button class="joinBtn">
+                가입하기
+            </button>
+        </div>
+        <!-- 동기화 모달창 -->
+        <article class="synch_modal synch_showing">
+            <div class="synch">
+                <span>최근 동기화: </span>
+                <button>지금 동기화하기</button>
+            </div>
+            <div class="premier">
+                <span>프리미어 기간: </span>
+                <button>프리미어 구매하기</button>
+            </div>
+            <div class="userSetting">
+                <button>계정 설정</button>
+                <form method="POST">
+                    <button class="logout" aria-label="Logout Button">계정 로그아웃</button>    
+                </form>
+            </div>
+        </article>
+        <!-- 우측 Nav 영역 -->
+        <ul class="menu">
+            <li>
+                <button type="submit" aria-label="upgrade_premium">
+                    <i class="fas fa-crown"></i>
+                </button>
+            </li>
+            <li>
+                <button type="submit" aria-label="toDo_chart">
+                    <i class="far fa-chart-bar"></i>
+                </button>
+            </li>
+            <li>
+                <button type="submit" aria-label="notice">
+                    <i class="far fa-bell"></i>
+                </button>
+            </li>
+            <li>
+                <button type="submit" aria-label="setting">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </li>
+        </ul>
+        <!-- 로그인 Modal 영역 -->
+        <articl class="modal showing" role="dialog" aria-labelledby="login">
+            <div class="modal_overay">
+                <div class="modal_content">
+                    <div class="modalLogo" id="login">
+                        <img src="assets/파이리.jpeg"/>
+                    </div>
+                    <form id="login_form" method="POST">
+                        <input type="email" name="login" placeholder="이메일 주소" />
+                        <input type="password" name="password" placeholder="비밀번호" />
+                        <button type="submit" class="modal_loginBtn">로그인</button>
+                    </form>
+                    <button class="missing_pwd">암호를 잊어버렸습니까?</button>
+                    <button class="modal_joinBtn">가입하기</button>
+                    <button class="clearBtn">✕</button>
+                </div>
+            </div>
+        </articl>
+    </header>
+</body>
+</html>
