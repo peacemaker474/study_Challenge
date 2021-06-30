@@ -36,19 +36,19 @@ const printNewProfile = (myProfile) => {
     const userBox = document.createElement("div");
     const userImage = document.createElement("img");
     const userName = document.createElement("span");
-    const logOut = document.createElement("button");
+    const btn = document.createElement("button");
 
     userBox.id = "profileInfo";
     userBox.prepend(userImage);
     userBox.appendChild(userName);
-    userBox.appendChild(logOut);
+    userBox.appendChild(btn);
     userImage.src = "assets/파이리.jpeg"
     userName.innerText = myProfile;
-    logOut.innerText = "⌵"
+    btn.innerText = "⌵"
     header.appendChild(userBox);
     header.replaceChild(userBox, login);
 
-    logOut.addEventListener("click", handleUserModal);
+    btn.addEventListener("click", handleUserModal);
 }
 
 // 로컬 스토리지 데이터 가져오기
