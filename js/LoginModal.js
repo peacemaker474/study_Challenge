@@ -1,11 +1,16 @@
+// 로그인 모달창에서 입력받는 태그
 const form = document.querySelector("#login_form"),
     email = form.querySelector("[type=email]");
+// 로그인 박스
 const login = document.querySelector(".loginForm");
+// 헤더 부분
 const header = document.querySelector("header");
+// 프로필 모달창
 const synchModal = document.querySelector(".synch_modal");
+// 프로필 모달창 내 로그아웃 버튼
 const logoutBtn = document.querySelector(".logout");
 
-const EMAIL_ID = "ID";
+const EMAIL_ID = "ID"; // 로컬 스토리지 키 Name
 
 // 로컬 스토리지 데이터 및 값 저장
 const saveLocalData = (value) => {
@@ -58,7 +63,7 @@ const loadedLocalData = () => {
 function printProfile () {
     loadedLocalData();
     form.addEventListener("submit", handleSubmit);
-    logoutBtn.addEventListener("click", handleRemoveData)
+    logoutBtn.addEventListener("click", handleRemoveData);
 }
 
 printProfile();

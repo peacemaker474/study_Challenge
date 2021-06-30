@@ -19,16 +19,16 @@ header{
 
 .loginForm,
 #profileInfo{
+    width:400px;
     margin-left: 10px;
     color: #e67e22;
-    justify-content: space-evenly;
     position: relative;
 }
 
-.loginForm .profileImg > img,
+.loginForm > img,
 #profileInfo > img{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 35px;
     margin: 0 10px;
     border-radius: 50%;
 }
@@ -39,9 +39,12 @@ header{
 .loginForm > span {
     margin: 0 3px;
 }
+#profileInfo > span {
+    padding-right: 8px;
+}
 
 #profileInfo > button {
-    padding: 0 0 8px 5px;
+    padding: 0 10px 7px 0;
 }
 
 /* 우측 Nav */
