@@ -48,7 +48,7 @@ const printNewProfile = (myProfile) => {
     header.appendChild(userBox);
     header.replaceChild(userBox, login);
 
-    logOut.addEventListener("click", handleUserModal);
+    btn.addEventListener("click", handleUserModal);
 }
 
 // 로컬 스토리지 데이터 가져오기
