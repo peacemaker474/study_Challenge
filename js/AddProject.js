@@ -17,7 +17,7 @@ const paintProject = (text) => {
     const abcBox = document.createElement('div');
     const nameDiv = document.createElement('div');
     const name = document.createElement('span');
-    const nameIcon = document.createElement("i");
+    const nameIcon = document.createElement("div");
     
     const timeDiv = document.createElement('div');
     const time1 = document.createElement('span');
@@ -25,6 +25,7 @@ const paintProject = (text) => {
 
     abcBox.className = "abcde";
     nameDiv.className = "projectName";
+    nameIcon.className = "bgcolor"
     nameDiv.prepend(nameIcon);
     nameDiv.appendChild(name);
     name.innerText = text;

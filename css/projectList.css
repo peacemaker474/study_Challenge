@@ -1,17 +1,25 @@
-.anotherDay,
-.project{
+.anotherDayS,
+.projectS{
     width: 100%;
 }
-.anotherDay{
-    height: 35%;
+.anotherDayS{
+    height: 30%;
+    margin-top: 60px;
 }
-.project{
+.projectS{
     height: 65%;
     position: relative;
+    margin-top: 
+}
+
+.divide{
+    width: 85%;
+    border: 1px solid rgba(10, 10, 10, 0.2);
+    margin: 20px auto;
 }
 
 /* another Section */
-.anotherDay > ul > li,
+.anotherDayS > ul > li,
 .abcde{
     width:90%;
     height:35px;
@@ -33,29 +41,35 @@
 
 .times {
     width: 30%;
-    padding-right: 5px;
     font-size: 14px;
     text-align: right;
 }
 
 .times > span{
-    padding-right: 5px;
+    padding-right: 3px;
 }
 
-/* project Section */
+/* projectS Section */
 .projectName {
     padding-left: 10px;
+    display: flex;
 }
 
 .projectName > span {
     display:inline-block;
-    width: 100px;
+    width: 70px;
     white-space: nowrap;
     padding-left: 5px;
 }
 .folderBox{
     width:100%;
     height:100%;
+}
+.bgcolor{
+    width:10px;
+    height:10px;
+    background-color: coral;
+    border-radius: 100%;
 }
 
 /* add Project Btn */
@@ -153,4 +167,10 @@
 
 .project_showing{
     display: none;
+}
+
+@media screen and (min-width: 1600px) {
+    .addProject{
+        width: 80%;
+    }
 }
