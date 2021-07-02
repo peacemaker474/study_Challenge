@@ -1,0 +1,217 @@
+/* 로그인 모달 영역 */
+.modal,
+.project_modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+.modal_overay,
+.project_overray{
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.modal_content,
+.project_content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 모달 로고 부분 */
+.modal_content .modalLogo{
+    width: 250px;
+    height:150px;
+    position: relative;
+}
+
+.modalLogo > img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 모달 로그인 영역 */
+.modal_content > form {
+    width: 80%;
+    height: 150px;
+}
+.modal_content > form > input {
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+
+.modal_content > form > input::placeholder {
+    font-size: 12px;
+}
+
+.modal_content .modal_loginBtn {
+    margin: 10px 0;
+    background-color: tomato;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.modal_content .missing_pwd {
+    font-size: 14px;
+    color:rgb(20, 20, 20);
+}
+
+.modal_content .modal_joinBtn {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    height: 30px;
+    border-top: 1px solid tomato;
+    padding-top: 5px;
+    color:tomato;
+}
+
+/* 모달 닫기 버튼 */
+.modal_content .clearBtn {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    width:25px;
+    height: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 모달 제어 */
+.showing{
+    display: none;
+}
+
+/* 동기화 모달 영역 */
+.synch_modal{
+    width: 150px;
+    height: 190px;
+    border: 1px solid rgba(10, 10, 10, 0.2) ;
+    position: absolute;
+    top: 90%;
+    left: 1.5%;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in;
+    background-color: white;
+    z-index: 10;
+}
+.synch,
+.premier,
+.userSetting{
+    width: 100%;
+    height: 30%;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+.premier {
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.1  );
+}
+
+.synch_modal .synch > span,
+.synch_modal .premier > span{
+    width: 100%;
+    padding: 5px 0 5px 10px;
+    color: limegreen;
+    display: block;
+}
+
+.synch > button,
+.premier > button,
+.userSetting > button
+.logout {
+    width:100%;
+    padding: 6px 0 0 10px;
+}
+.userSetting > button,
+.logout{
+    padding: 5px 0 0 10px;
+}
+.logout {
+    margin-top: 5px;
+}
+
+.synch_showing{
+    transform-origin: 0% 0%;
+    transform: scale(0);
+}
+
+/* 프로젝트 추가 모달 영역 */
+
+.project_overray{
+    height: 200px;
+}
+
+.project_content > h4{
+    margin: 20px 0;
+}
+
+.projectInput {
+    width: 90%;
+    height: 30px;
+    border: 1px solid rgba(10, 10, 10, 0.4);
+    border-radius: 5px;
+}
+
+.projectInput::placeholder{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.painting{
+    border: 1px solid black;
+    width: 90%;
+    height: 50px;
+    margin: 10px 0;
+}
+.project_btn{
+    width: 90%;
+    height: 25px;
+    display:flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+.project_btn > button {
+    width: 70px;
+    border: 1px solid rgba(10, 10, 10, 0.4);
+    border-radius: 5px;
+}
+.clear_btn{
+    margin-right: 10px;
+}
+
+.project_showing{
+    display: none;
+}

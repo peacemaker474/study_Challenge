@@ -1,7 +1,6 @@
 @import url("reset.css");
-@import url("LoginModal.css");
-@import url("synchModal.css");
-@import url("projectList.css");
+@import url("Modal.css");
+@import url("Project.css");
 
 body{
     width: 100vw;
