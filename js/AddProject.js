@@ -1,9 +1,6 @@
-const projectModal = document.querySelector(".project_modal");
 const confirm = document.querySelector(".confirm_btn");
-const addProject = document.querySelector(".newProject");
 const writeBtn = document.querySelector(".projectInput");
 const projectLists = document.querySelector(".projectLists");
-const quitBtn = document.querySelector(".clear_btn");
 
 const PROJECT_NAME = "Project"
 
@@ -48,14 +45,6 @@ const paintProject = (text) => {
     saveLocalProject();
 }
 
-const handleClearModal = () => {
-    projectModal.classList.add("project_showing");
-}
-
-const handleProjectModal = () => {
-    projectModal.classList.remove("project_showing");
-}
-
 const handleConfirmProject = () => {
     projectModal.classList.add("project_showing");
     const currentValue = writeBtn.value;
@@ -76,8 +65,6 @@ const loadedProject = () => {
 function showProject () {
     loadedProject();
     confirm.addEventListener("click", handleConfirmProject);
-    addProject.addEventListener("click", handleProjectModal);
-    quitBtn.addEventListener("click", handleClearModal);
 }
 
 showProject();
