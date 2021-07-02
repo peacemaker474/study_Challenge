@@ -2,8 +2,8 @@ const projectModal = document.querySelector(".project_modal");
 const confirm = document.querySelector(".confirm_btn");
 const addProject = document.querySelector(".newProject");
 const writeBtn = document.querySelector(".projectInput");
-const folder = document.querySelector(".folderBox");
-const abcd = document.querySelector(".abcde");
+const projectLists = document.querySelector(".projectLists");
+const quitBtn = document.querySelector(".clear_btn");
 
 const PROJECT_NAME = "Project"
 
@@ -14,37 +14,43 @@ const saveLocalProject = () => {
 }
 
 const paintProject = (text) => {
-    const abcBox = document.createElement('div');
-    const nameDiv = document.createElement('div');
-    const name = document.createElement('span');
-    const nameIcon = document.createElement("div");
+    const lists = document.createElement('li');
+    const pjBox = document.createElement('div');
+    const pjName = document.createElement('span');
+    const pjIcon = document.createElement("div");
     
     const timeDiv = document.createElement('div');
-    const time1 = document.createElement('span');
-    const time2 = document.createElement('span');
+    const hours = document.createElement('span');
+    const timeNum = document.createElement('span');
 
-    abcBox.className = "abcde";
-    nameDiv.className = "projectName";
-    nameIcon.className = "bgcolor"
-    nameDiv.prepend(nameIcon);
-    nameDiv.appendChild(name);
-    name.innerText = text;
+    const newId = projectList.length + 1;
+
+    lists.className = "projectList";
+    lists.id = newId;
+    pjBox.className = "projectName";
+    pjIcon.className = "bgcolor"
+    pjBox.prepend(pjIcon);
+    pjBox.appendChild(pjName);
+    pjName.innerText = text;
     timeDiv.className = "times";
-    timeDiv.prepend(time1);
-    timeDiv.appendChild(time2);
-    time1.innerText = "0h";
-    time2.innerText = "0";
+    timeDiv.prepend(hours);
+    timeDiv.appendChild(timeNum);
+    hours.innerText = "0h";
+    timeNum.innerText = "0";
 
-    abcBox.prepend(nameDiv);
-    abcBox.appendChild(timeDiv);
+    lists.prepend(pjBox);
+    lists.appendChild(timeDiv);
 
-    folder.appendChild(abcBox);
+    projectLists.appendChild(lists);
 
-    const projectObj = {text};
+    const projectObj = {id: newId, text};
     projectList.push(projectObj)
     saveLocalProject();
 }
 
+const handleClearModal = () => {
+    projectModal.classList.add("project_showing");
+}
 
 const handleProjectModal = () => {
     projectModal.classList.remove("project_showing");
@@ -53,8 +59,10 @@ const handleProjectModal = () => {
 const handleConfirmProject = () => {
     projectModal.classList.add("project_showing");
     const currentValue = writeBtn.value;
-    paintProject(currentValue);
-    writeBtn.value = "";
+    if(currentValue !== ""){
+        paintProject(currentValue);
+        writeBtn.value = "";
+    }
 }
 
 const loadedProject = () => {
@@ -69,6 +77,7 @@ function showProject () {
     loadedProject();
     confirm.addEventListener("click", handleConfirmProject);
     addProject.addEventListener("click", handleProjectModal);
+    quitBtn.addEventListener("click", handleClearModal);
 }
 
 showProject();

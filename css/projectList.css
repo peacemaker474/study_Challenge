@@ -4,12 +4,11 @@
 }
 .anotherDayS{
     height: 30%;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 .projectS{
     height: 65%;
     position: relative;
-    margin-top: 
 }
 
 .divide{
@@ -20,7 +19,7 @@
 
 /* another Section */
 .anotherDayS > ul > li,
-.abcde{
+.projectList{
     width:90%;
     height:35px;
     display:flex;
@@ -35,8 +34,12 @@
     padding-left: 10px;
 }
 
+.days > i {
+    width:15px;
+    height:15px;
+}
 .days > span{
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 .times {
@@ -46,7 +49,7 @@
 }
 
 .times > span{
-    padding-right: 3px;
+    padding-right: 5px;
 }
 
 /* projectS Section */
@@ -61,7 +64,7 @@
     white-space: nowrap;
     padding-left: 5px;
 }
-.folderBox{
+.projectLists{
     width:100%;
     height:100%;
 }
@@ -170,7 +173,7 @@
 }
 
 @media screen and (min-width: 1600px) {
-    .addProject{
+    .addProject button{
         width: 80%;
     }
 }
