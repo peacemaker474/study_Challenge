@@ -3,6 +3,7 @@ const confirm = document.querySelector(".confirm_btn");
 const addProject = document.querySelector(".newProject");
 const writeBtn = document.querySelector(".projectInput");
 const folder = document.querySelector(".folderBox");
+const abcd = document.querySelector(".abcde");
 
 const PROJECT_NAME = "Project"
 
@@ -13,6 +14,7 @@ const saveLocalProject = () => {
 }
 
 const paintProject = (text) => {
+    const abcBox = document.createElement('div');
     const nameDiv = document.createElement('div');
     const name = document.createElement('span');
     const nameIcon = document.createElement("i");
@@ -21,6 +23,7 @@ const paintProject = (text) => {
     const time1 = document.createElement('span');
     const time2 = document.createElement('span');
 
+    abcBox.className = "abcde";
     nameDiv.className = "projectName";
     nameDiv.prepend(nameIcon);
     nameDiv.appendChild(name);
@@ -31,8 +34,10 @@ const paintProject = (text) => {
     time1.innerText = "0h";
     time2.innerText = "0";
 
-    folder.prepend(nameDiv);
-    folder.appendChild(timeDiv);
+    abcBox.prepend(nameDiv);
+    abcBox.appendChild(timeDiv);
+
+    folder.appendChild(abcBox);
 
     const projectObj = {text};
     projectList.push(projectObj)
