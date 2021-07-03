@@ -1,6 +1,7 @@
 /* 로그인 모달 영역 */
 .modal,
-.project_modal{
+.project_modal,
+.edit_modal{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -10,7 +11,8 @@
 }
 
 .modal_overay,
-.project_overray{
+.project_overray,
+.edit_overray{
     background-color: rgb(240, 240, 240);
     width: 300px;
     height: 450px;
@@ -22,7 +24,8 @@
 }
 
 .modal_content,
-.project_content{
+.project_content,
+.edit_content{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -170,15 +173,18 @@
 
 /* 프로젝트 추가 모달 영역 */
 
-.project_overray{
+.project_overray,
+.edit_overray{
     height: 200px;
 }
 
-.project_content > h4{
+.project_content > h4,
+.edit_content > h4{
     margin: 20px 0;
 }
 
-.projectInput {
+.projectInput,
+.editInput {
     width: 90%;
     height: 30px;
     border: 1px solid rgba(10, 10, 10, 0.4);
@@ -190,28 +196,73 @@
     font-size: 14px;
 }
 
-.painting{
+.painting,
+.edit_painting{
     border: 1px solid black;
     width: 90%;
     height: 50px;
     margin: 10px 0;
 }
-.project_btn{
+.project_btn,
+.edit_btn{
     width: 90%;
     height: 25px;
     display:flex;
     justify-content: flex-end;
     text-align: center;
 }
-.project_btn > button {
+.project_btn > button,
+.edit_btn > button{
     width: 70px;
     border: 1px solid rgba(10, 10, 10, 0.4);
     border-radius: 5px;
 }
-.clear_btn{
+.clear_btn,
+.edit_clear_btn{
     margin-right: 10px;
 }
 
-.project_showing{
+.project_showing,
+.edit_showing{
     display: none;
+}
+
+/* 프로젝트 편집, 제거 모달창 */
+.contextModal{
+    width: 160px;
+    height: 90px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgba(10, 10, 10, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    z-index: 100;
+    margin: 20px;
+}
+.contextModal > ul {
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contextModal > ul > li > div {
+    height: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 23px;
+    cursor: pointer;
+}
+.contextModal > ul > li:active {
+    background-color: red;
+}
+.change_btn:hover,
+.complete_btn:hover,
+.remove_btn:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.context_showing{
+    display:none;
 }

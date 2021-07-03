@@ -12,7 +12,6 @@ const saveLocalProject = () => {
 
 const paintProject = (text) => {
     const lists = document.createElement('li');
-    const pjBox = document.createElement('div');
     const pjName = document.createElement('span');
     const pjIcon = document.createElement("div");
     
@@ -24,10 +23,9 @@ const paintProject = (text) => {
 
     lists.className = "projectList";
     lists.id = newId;
-    pjBox.className = "projectName";
     pjIcon.className = "bgcolor"
-    pjBox.prepend(pjIcon);
-    pjBox.appendChild(pjName);
+    lists.prepend(pjIcon);
+    lists.appendChild(pjName);
     pjName.innerText = text;
     timeDiv.className = "times";
     timeDiv.prepend(hours);
@@ -35,7 +33,6 @@ const paintProject = (text) => {
     hours.innerText = "0h";
     timeNum.innerText = "0";
 
-    lists.prepend(pjBox);
     lists.appendChild(timeDiv);
 
     projectLists.appendChild(lists);

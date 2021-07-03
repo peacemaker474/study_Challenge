@@ -48,17 +48,16 @@
 }
 
 /* projectS Section */
-.projectName {
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
+.projectList{
+    justify-content: space-between;
 }
 
-.projectName > span {
-    display:inline-block;
-    width: 70px;
-    white-space: nowrap;
-    padding: 3px 0 0 8px;
+.projectList > span {
+    width:70%;
+    padding: 3px 0 0 30px;
+}
+.projectList .times {
+    margin-left: 10px;
 }
 
 .bgcolor{
@@ -66,6 +65,9 @@
     height:10px;
     background-color: coral;
     border-radius: 100%;
+    margin: 0 10px;
+    position: absolute;
+    z-index: -1;
 }
 
 /* add Project Btn */

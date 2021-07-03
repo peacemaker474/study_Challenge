@@ -10,6 +10,8 @@
     <script defer src="js/LoginModal.js"></script>
     <script defer src="js/ProjectModal.js"></script>
     <script defer src="js/AddProject.js"></script>
+    <script defer src="js/EditModal.js"></script>
+    <script defer src="js/EditProject.js"></script>
     <title> 뽀모도 </title>
 </head>
 <body>
@@ -145,9 +147,22 @@
                 <i class="fas fa-tag"></i>
                 <i class="far fa-folder"></i>
             </div>
+            <div class="contextModal context_showing">
+                <ul>
+                    <li>
+                        <div class="change_btn">프로젝트 편집</div>
+                    </li>
+                    <li>
+                        <div class="complete_btn">프로젝트 완료</div>
+                    </li>
+                    <li>
+                        <div class="remove_btn">프로젝트 제거</div>
+                    </li>
+                </ul>
+            </div>
         </section>
         <!-- 프로젝트 모달 -->
-        <articl class="project_modal project_showing" role="dialog" aria-labelledby="login">
+        <articl class="project_modal project_showing" >
             <div class="project_overray">
                 <div class="project_content">
                     <h4>프로젝트 추가</h4>
@@ -156,6 +171,20 @@
                     <div class="project_btn">
                         <button class="clear_btn">취소</button>
                         <button class="confirm_btn">확인</button>
+                    </div>
+                </div>
+            </div>
+        </articl>
+        <!-- 편집 모달 -->
+        <articl class="edit_modal edit_showing" >
+            <div class="edit_overray">
+                <div class="edit_content">
+                    <h4>프로젝트 편집</h4>
+                    <input type="text" class="editInput"/>
+                    <div class="edit_painting"></div>
+                    <div class="edit_btn">
+                        <button class="edit_clear_btn">취소</button>
+                        <button class="edit_confirm_btn">확인</button>
                     </div>
                 </div>
             </div>
