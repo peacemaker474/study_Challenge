@@ -4,7 +4,7 @@ const projectLists = document.querySelector(".projectLists");
 
 const PROJECT_NAME = "Project"
 
-let projectList = [];
+const projectList = [];
 
 const saveLocalProject = () => {
     localStorage.setItem(PROJECT_NAME, JSON.stringify(projectList));
@@ -26,12 +26,12 @@ const paintProject = (text) => {
     pjIcon.className = "bgcolor"
     lists.prepend(pjIcon);
     lists.appendChild(pjName);
-    pjName.innerText = text;
+    pjName.textContent = text;
     timeDiv.className = "times";
     timeDiv.prepend(hours);
     timeDiv.appendChild(timeNum);
-    hours.innerText = "0h";
-    timeNum.innerText = "0";
+    hours.textContent = "0h";
+    timeNum.textContent = "0";
 
     lists.appendChild(timeDiv);
 
