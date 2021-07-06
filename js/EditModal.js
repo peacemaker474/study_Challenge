@@ -37,7 +37,6 @@ const handleMenu = (event) => {
     // if(event.target.id === find[0].id) {
     //     find[0].style.border = "1px solid red";
     // }
-
     
 }
 
