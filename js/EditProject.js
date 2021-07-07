@@ -52,6 +52,7 @@ function changeList () {
     changeBtn.addEventListener("click", handleEditProject);
     editClear.addEventListener("click", handleEditClear);
     Array.from(editPaint).map(item => item.addEventListener("click", handleChangeColor));
+    editBtn.addEventListener("change", handleChange);
 }
 
 changeList();

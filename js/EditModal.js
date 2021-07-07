@@ -25,7 +25,7 @@ const handleMenu = (event) => {
     const y = event.layerY;
 
     const findValue = event.path.filter(item => item.localName === "span");
-    const currentValue = projectList.filter(item => item.text === findValue[0].innerText);
+    const currentValue = projectList.filter(item => item.text === findValue[0].textContent);
     if(newList !== []){
         newList.push(currentValue[0]);
     }

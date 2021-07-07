@@ -1,3 +1,4 @@
+const addForm = document.querySelector(".addForm");
 const confirm = document.querySelector(".confirm_btn");
 const writeBtn = document.querySelector(".projectInput");
 const projectLists = document.querySelector(".projectLists");
@@ -74,6 +75,7 @@ const loadedProject = () => {
 function showProject () {
     loadedProject();
     Array.from(cotrolbg).forEach(item => item.addEventListener("click", handleControlColor));
+    addForm.addEventListener("submit", handleConfirmProject);
     confirm.addEventListener("click", handleConfirmProject);
 }
 
