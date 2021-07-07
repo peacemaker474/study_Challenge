@@ -177,7 +177,10 @@
 .edit_overray{
     height: 200px;
 }
-
+.addForm,
+.editForm{
+    width: 90%;
+}
 .project_content > h4,
 .edit_content > h4{
     margin: 20px 0;
@@ -185,14 +188,15 @@
 
 .projectInput,
 .editInput {
-    width: 90%;
+    width: 100%;
     height: 30px;
     border: 1px solid rgba(10, 10, 10, 0.4);
     border-radius: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .projectInput::placeholder{
-    padding-left: 10px;
     font-size: 14px;
 }
 
@@ -253,9 +257,7 @@
     line-height: 23px;
     cursor: pointer;
 }
-.contextModal > ul > li:active {
-    background-color: red;
-}
+
 .change_btn:hover,
 .complete_btn:hover,
 .remove_btn:hover{

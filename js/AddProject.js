@@ -4,7 +4,7 @@ const projectLists = document.querySelector(".projectLists");
 const cotrolbg = document.querySelectorAll(".controls_color");
 
 const PROJECT_NAME = "Project"
-let COLOR = "";
+let COLOR = "black"; // 기본값은 "black"
 
 const projectList = [];
 
