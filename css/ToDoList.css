@@ -81,4 +81,8 @@
     .add_toDoList > label{
         vertical-align: unset;
     }
+    .show_finishwork{
+        width:10%;
+        height: 0%;
+    }
 }
