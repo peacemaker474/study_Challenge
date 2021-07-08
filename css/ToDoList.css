@@ -67,7 +67,7 @@
 
 @media screen and (min-width: 1600px) {
     .mainSection .time_line{
-        width: 80%;
+        height: 5%;
     }
     .estimated_time > h2,
     .finish_work > h2,
