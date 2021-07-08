@@ -4,7 +4,7 @@
  https://peacemaker474.github.io/study_Challenge/
 
 ## 진행상황
-    ✅ 로그인 및 프로젝트 추가
+    ✅ 로그인 및 프로젝트 추가, 편집, 제거
 
 ## 2021.06.28
     ✅ 로그인 영역 모달창 띄우기
