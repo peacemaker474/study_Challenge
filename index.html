@@ -86,147 +86,179 @@
             </div>
         </div>
     </articl>
-    <!-- 좌측 목록 -->
-    <aside>
-        <section class="anotherDayS">
-            <ul>
-                <li>
-                    <div class="days">
-                        <i class="fas fa-sun"></i>
-                        <span>오늘</span>
-                    </div>
-                    <div class="times">
-                        <span>0h</span>
-                        <span>0</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="days">
-                        <i class="fas fa-sunset"></i>   
-                        <span>내일</span>
-                    </div>
-                    <div class="times">
-                        <span>0h</span>
-                        <span>0</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="days">
-                        <i class="far fa-calendar-check"></i>
-                        <span>다음</span>
-                    </div>
-                    <div class="times">
-                        <span>0h</span>
-                        <span>0</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="days">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>추후</span>
-                    </div>
-                    <div class="times">
-                        <span>0h</span>
-                        <span>0</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="days finish">
-                        <i class="far fa-check-circle"></i>
-                        <span>완료됨</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <div class="divide"></div>
-        <section class="projectS">
-            <ul class="projectLists">
-            </ul>
-            <div class="addProject">
-                <button class="newProject">프로젝트 추가</button>
-                <i class="fas fa-tag"></i>
-                <i class="far fa-folder"></i>
-            </div>
-            <div class="contextModal context_showing">
+    <!-- 메인 페이지 -->
+    <main>
+        <!-- 좌측 목록 -->
+        <aside>
+            <section class="anotherDayS">
                 <ul>
                     <li>
-                        <div class="change_btn">프로젝트 편집</div>
+                        <div class="days">
+                            <i class="fas fa-sun"></i>
+                            <span>오늘</span>
+                        </div>
+                        <div class="times">
+                            <span>0h</span>
+                            <span>0</span>
+                        </div>
                     </li>
                     <li>
-                        <div class="complete_btn">프로젝트 완료</div>
+                        <div class="days">
+                            <i class="fas fa-sunset"></i>   
+                            <span>내일</span>
+                        </div>
+                        <div class="times">
+                            <span>0h</span>
+                            <span>0</span>
+                        </div>
                     </li>
                     <li>
-                        <div class="remove_btn">프로젝트 제거</div>
+                        <div class="days">
+                            <i class="far fa-calendar-check"></i>
+                            <span>다음</span>
+                        </div>
+                        <div class="times">
+                            <span>0h</span>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="days">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>추후</span>
+                        </div>
+                        <div class="times">
+                            <span>0h</span>
+                            <span>0</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="days finish">
+                            <i class="far fa-check-circle"></i>
+                            <span>완료됨</span>
+                        </div>
                     </li>
                 </ul>
+            </section>
+            <div class="divide"></div>
+            <section class="projectS">
+                <ul class="projectLists">
+                </ul>
+                <div class="addProject">
+                    <button class="newProject">프로젝트 추가</button>
+                    <i class="fas fa-tag"></i>
+                    <i class="far fa-folder"></i>
+                </div>
+                <div class="contextModal context_showing">
+                    <ul>
+                        <li>
+                            <div class="change_btn">프로젝트 편집</div>
+                        </li>
+                        <li>
+                            <div class="complete_btn">프로젝트 완료</div>
+                        </li>
+                        <li>
+                            <div class="remove_btn">프로젝트 제거</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 프로젝트 모달 -->
+            <articl class="project_modal project_showing" >
+                <div class="project_overray">
+                    <div class="project_content">
+                        <h4>프로젝트 추가</h4>
+                        <form class="addForm">
+                            <input type="text" placeholder="새로운 프로젝트 이름" class="projectInput"/>
+                        </form>
+                        <div class="painting">
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                            <div class="controls_color"></div>
+                        </div>
+                        <div class="project_btn">
+                            <button class="clear_btn">취소</button>
+                            <button class="confirm_btn">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </articl>
+            <!-- 편집 모달 -->
+            <articl class="edit_modal edit_showing" >
+                <div class="edit_overray">
+                    <div class="edit_content">
+                        <h4>프로젝트 편집</h4>
+                        <form class="editForm">
+                            <input type="text" class="editInput"/>
+                        </form>
+                        <div class="edit_painting">
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                            <div class="edit_controls_color"></div>
+                        </div>
+                        <form class="edit_btn">
+                            <button class="edit_clear_btn">취소</button>
+                            <button class="edit_confirm_btn">확인</button>
+                        </form>
+                    </div>
+                </div>
+            </articl>
+        </aside>
+        <!-- 메인 영역 -->
+        <section class="mainSection">
+            <h1 class="request_name">테스트</h1>
+            <section class="time_line">
+                <div class="estimated_time">
+                    <h2>0</h2>
+                    <span>예정 시간(h)</span>
+                </div>
+                <div class="finish_work">
+                    <h2>0</h2>
+                    <span>완료할 작업</span>
+                </div>
+                <div class="finished_time">
+                    <h2>0</h2>
+                    <span>완료한 시간(h)</span>
+                </div>
+                <div class="finished_work">
+                    <h2>0</h2>
+                    <span>완료한 작업</span>
+                </div>
+            </section>
+            <form class="add_toDoList">
+                <label> + </label>
+                <input id="addToDo" type="text" placeholder="일단 적어보세요"/>
+            </form>
+            <div class="show_finishwork">
+                <span class="work_name">완료된 작업 보기</span>
             </div>
         </section>
-        <!-- 프로젝트 모달 -->
-        <articl class="project_modal project_showing" >
-            <div class="project_overray">
-                <div class="project_content">
-                    <h4>프로젝트 추가</h4>
-                    <form class="addForm">
-                        <input type="text" placeholder="새로운 프로젝트 이름" class="projectInput"/>
-                    </form>
-                    <div class="painting">
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                        <div class="controls_color"></div>
-                    </div>
-                    <div class="project_btn">
-                        <button class="clear_btn">취소</button>
-                        <button class="confirm_btn">확인</button>
-                    </div>
-                </div>
-            </div>
-        </articl>
-        <!-- 편집 모달 -->
-        <articl class="edit_modal edit_showing" >
-            <div class="edit_overray">
-                <div class="edit_content">
-                    <h4>프로젝트 편집</h4>
-                    <form class="editForm">
-                        <input type="text" class="editInput"/>
-                    </form>
-                    <div class="edit_painting">
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                        <div class="edit_controls_color"></div>
-                    </div>
-                    <form class="edit_btn">
-                        <button class="edit_clear_btn">취소</button>
-                        <button class="edit_confirm_btn">확인</button>
-                    </form>
-                </div>
-            </div>
-        </articl>
-    </aside>
+    </main>
 </body>
 </html>

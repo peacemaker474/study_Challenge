@@ -1,0 +1,66 @@
+/* 프로젝트 이름, 오늘, 내일 받아오는 hn 태그*/
+.request_name{
+    font-size: 28px;
+    margin: 20px 0 20px 17.5px;
+}
+/* 프로젝트 진행 과정 */
+.mainSection .time_line{
+    width:97%;
+    height:10%;
+    background-color: white;
+    margin-left: 17.5px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.estimated_time,
+.finish_work,
+.finished_time,
+.finished_work{
+    width:20%;
+    height: 100%;
+    text-align: center;
+}
+.estimated_time > h2,
+.finish_work > h2,
+.finished_time > h2,
+.finished_work > h2{
+    font-size: 26px;
+    margin: 15px 0 5px 0;
+    color:crimson;
+}
+/* 할일 입력 받아오기 */
+.add_toDoList{
+    width:97%;
+    height: 5%;
+    background-color: white;
+    margin: 15px 0 0 17.5px;
+    border-radius: 5px;
+}
+
+.add_toDoList > * {
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.add_toDoList > label {
+    font-size: 25px;
+    vertical-align: sub;
+    color:gray;
+    padding-left: 15px;
+}
+#addToDo{
+    width:95%;
+}
+/* 완료된 작업 영억 */
+.show_finishwork{
+    width: 20%;
+    height: 3%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    line-height: 27px;
+}
