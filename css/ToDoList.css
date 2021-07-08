@@ -64,3 +64,21 @@
     border-radius: 5px;
     line-height: 27px;
 }
+
+@media screen and (min-width: 1600px) {
+    .mainSection{
+        width: 80%;
+    }
+    .estimated_time > h2,
+    .finish_work > h2,
+    .finished_time > h2,
+    .finished_work > h2{
+        margin: 5px 0 5px 0;
+    }
+    .add_toDoList{
+        height: 3%;
+    }
+    .add_toDoList > label{
+        vertical-align: none;
+    }
+}
