@@ -19,7 +19,7 @@
 .finish_work,
 .finished_time,
 .finished_work{
-    font-size:13px;
+    font-size:12px;
     width:20%;
     height: 100%;
     text-align: center;
@@ -57,7 +57,7 @@
 }
 /* 완료된 작업 영억 */
 .show_finishwork{
-    width: 15%;
+    width: 20%;
     height: 4%;
     margin: 20px auto;
     text-align: center;
@@ -78,7 +78,7 @@
     .finish_work > h2,
     .finished_time > h2,
     .finished_work > h2{
-        margin: 5px 0 5px 0;
+        margin: 10px 0 5px 0;
     }
     .add_toDoList{
         height: 3%;
@@ -90,5 +90,6 @@
     .show_finishwork{
         width:10%;
         height: 2%;
+        line-height: 25px;
     }
 }
