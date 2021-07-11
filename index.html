@@ -13,6 +13,8 @@
     <script defer src="js/EditModal.js"></script>
     <script defer src="js/EditProject.js"></script>
     <script defer src="js/mainTitle.js"></script>
+    <script defer src="js/ShowList.js"></script>
+    <script defer src="js/ToDoList.js"></script>
     <title> 뽀모도 </title>
 </head>
 <body>
@@ -256,9 +258,17 @@
                 <label> + </label>
                 <input id="addToDo" type="text" placeholder="일단 적어보세요"/>
             </form>
+            <section class="toDo_section">
+                <ul class="toDo_list">
+                </ul>
+            </section>
             <div class="show_finishwork">
                 <span class="work_name">완료된 작업 보기</span>
             </div>
+            <section class="fn_section fn_showing">
+                <ul class="fn_list">
+                </ul>
+            </section>
         </section>
     </main>
 </body>
